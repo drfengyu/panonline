@@ -19,7 +19,6 @@
 		var repoName = "panonline";
 		var path="upload";
 		var apiUrl = "https://api.github.com/repos/" + username + "/" + repoName + "/contents/"+path+"/";
-
 		// 获取文件列表
 		fetch(apiUrl)
 			.then(response => response.json())
@@ -36,26 +35,29 @@
 				});
 			})
 			.catch(error => console.error(error));
-
+		
 		// 上传文件
 		function uploadFile() {
 			var file = document.getElementById("file").files[0];
 			var reader = new FileReader();
 			reader.onload = function(event) {
+					
 				var content = event.target.result;
 				var filename = file.name;
-				var path = path="/" + filename;
+				var path = "upload/" + filename;
 				var message = "Upload " + filename;
-				var url = "https://api.github.com/repos/" + username + "/" + repoName + "/contents/" + path;
+				var url = "https://api.github.com/repos/" + username + "/" + repoName + "/contents/" + path+"/";
+				var token="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";
 				var data = {
 					message: message,
-					content: btoa(unescape(encodeURIComponent(content)))
+					content: bota(unescape(encodeURIComponent(content)))
 				};
 				fetch(url, {
 					method: "PUT",
 					headers: {
-						"Authorization": "",
-						"Content-Type": "application/json"
+						"Authorization":"Token "+token,
+						"Content-Type": "application/json",
+						"Accept":"application/vnd.github+json",
 					},
 					body: JSON.stringify(data)
 				})
