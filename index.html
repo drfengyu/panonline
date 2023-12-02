@@ -17,7 +17,8 @@
 		// GitHub仓库信息
 		var username = "drfengyu";
 		var repoName = "panonline";
-		var apiUrl = "https://api.github.com/repos/" + username + "/" + repoName + "/contents/";
+		var path="upload";
+		var apiUrl = "https://api.github.com/repos/" + username + "/" + repoName + "/contents/"+path+"/";
 
 		// 获取文件列表
 		fetch(apiUrl)
@@ -43,17 +44,17 @@
 			reader.onload = function(event) {
 				var content = event.target.result;
 				var filename = file.name;
-				var path = "path/to/" + filename;
+				var path = path="/" + filename;
 				var message = "Upload " + filename;
 				var url = "https://api.github.com/repos/" + username + "/" + repoName + "/contents/" + path;
 				var data = {
 					message: message,
-					content: btoa(content)
+					content: btoa(unescape(encodeURIComponent(content)))
 				};
 				fetch(url, {
 					method: "PUT",
 					headers: {
-						"Authorization": "token your_access_token",
+						"Authorization": "",
 						"Content-Type": "application/json"
 					},
 					body: JSON.stringify(data)
