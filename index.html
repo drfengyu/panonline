@@ -13,28 +13,35 @@
 	<br>
 	<h2>文件列表</h2>
 	<ul id="fileList"></ul>
-	<script>
-		// GitHub仓库信息
-		var username = "drfengyu";
-		var repoName = "panonline";
-		var path="upload";
-		var apiUrl = "https://api.github.com/repos/" + username + "/" + repoName + "/contents/"+path+"/";
-		// 获取文件列表
-		fetch(apiUrl)
-			.then(response => response.json())
-			.then(data => {
-				data.forEach(file => {
-					if (file.type == "file") {
-						var li = document.createElement("li");
-						var a = document.createElement("a");
-						a.href = file.download_url;
-						a.innerText = file.name;
-						li.appendChild(a);
-						document.getElementById("fileList").appendChild(li);
-					}
-				});
-			})
-			.catch(error => console.error(error));
+	<script>		
+        var username = "drfengyu";
+        var repoName = "panonline";
+
+        function updateli(data) {
+            const fileList = document.querySelector('#fileList');
+            fileList.innerHTML = '';
+            data.forEach(file => {
+                if (file.type == "file") {
+                    var li = document.createElement("li");
+                    var a = document.createElement("a");
+                    a.href = file.download_url;
+                    a.innerText = decodeURIComponent(file.name);
+                    li.appendChild(a);
+                    fileList.appendChild(li);
+                }
+            });
+        }
+
+        function FileLists() {
+           
+            var path = "upload";
+            var apiUrl = "https://api.github.com/repos/" + username + "/" + repoName + "/contents/" + path + "/";
+			fetch(apiUrl)
+				.then(response => response.json())
+				.then(data => updateli(data))
+                .catch(error => console.error(error));
+		}
+		FileLists();
         var keyStr = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
 		//将Ansi编码的字符串进行Base64编码
 		function encode64(input) {
@@ -59,7 +66,10 @@
 						char2 = str.charCodeAt(i++); char3 = str.charCodeAt(i++); out += String.fromCharCode(((c & 0x0F) << 12) | ((char2 & 0x3F) << 6) | ((char3 & 0x3F) << 0)); break;
 				}
             } return out;
-        }
+		}
+
+		
+
 		// 上传文件
 		function uploadFile() {
 			var file = document.getElementById("file").files[0];
@@ -68,28 +78,35 @@
 					
 				var content = event.target.result;
 				var filename = file.name;
-				var path = "upload/" + filename;
+                var path = "upload/" + encodeURIComponent(filename);
 				var message = "Upload " + filename;
-				var url = "https://api.github.com/repos/" + username + "/" + repoName + "/contents/" + path+"/";
-				var token="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";
+				var url = "https://api.github.com/repos/" + username + "/" + repoName + "/contents/" + path;
+                var encoded_url = encodeURI(url); 
+                var token ="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";
 				var data = {
 					message: message,
 					content: encode64(utf16to8(content))
 				};
-				fetch(url, {
+				
+				fetch(encoded_url, {
 					method: "PUT",
 					headers: {
-						"Authorization":"Token "+token,
+						"Authorization": "Token " + token,
 						"Content-Type": "application/json",
-						"Accept":"application/vnd.github+json",
+						"Accept": "application/vnd.github+json",
 					},
 					body: JSON.stringify(data)
 				})
-				.then(response => response.json())
-				.then(data => console.log(data))
-				.catch(error => console.error(error));
+					.then(response => response.json())
+					.then(data => {
+						console.log(data);
+						FileLists();
+					})
+					.catch(error => console.error(error))
+					;
 			};
 			reader.readAsText(file);
+			
 		}
 	</script>
 </body>
