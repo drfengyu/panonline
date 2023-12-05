@@ -3,9 +3,13 @@
 <head>
 	<meta charset="utf-8">
 	<title>海边的橘座</title>
-<link rel="stylesheet" href="./favicon.ico">
-    <link rel="stylesheet" href="./index.css">
+	<link rel="stylesheet" href="./favicon.ico">
+	<link rel="stylesheet" href="./index.css">
+	<link rel="stylesheet" id="kratos-css" href="/css/kratosr.min.css" type="text/css" media="all">
+	<link rel="stylesheet" id="darkmode-css" href="/css/kr-color-dark.min.css" type="text/css" media="(prefers-color-scheme: dark)">
+	<script src="/js/kr-dark.min.js"></script>
 </head>
+
 <body>
 	<div class="bgcover"></div>
 	<div class="leftnav">
@@ -47,30 +51,12 @@
 			<p><br></p>
 			<p>我比较喜欢听音乐，普通音乐和纯音乐都喜欢听</p>
 			<p>最喜欢的歌手是徐良、乔洋、小贱</p>
-			
+
 			<p><br></p>
 		</div>
 		<div class="page project">
 			<h1>我的项目</h1>
 			<ul class="projectlist">
-				<li>
-					<div class="title">在线图床</div>
-					<div class="exp">用来存储图片的在线网站</div>
-					<div class="link">
-						<a href="https://img.drfengling.online" target="_blank">在线预览</a>
-					</div>
-				</li>
-				<li>
-					<div class="title">轻量在线云盘</div>
-					<form>
-						<label for="file">选择文件：</label>
-						<input type="file" id="file" name="file"><br><br>
-						<button type="button" onclick="uploadFile()">上传文件</button>
-					</form>
-					<br>
-					<h2>文件列表</h2>
-					<ul id="fileList"></ul>
-				</li>
 				<li>
 					<div class="title">浅梦博客</div>
 					<div class="exp">在线的,基于hexo的个人博客</div>
@@ -85,6 +71,14 @@
 						<a href="https://nutxai.drfengling.online" target="_blank">在线预览</a>
 					</div>
 				</li>
+				<li>
+					<div class="title">在线图床</div>
+					<div class="exp">用来存储图片的在线网站</div>
+					<div class="link">
+						<a href="https://img.drfengling.online" target="_blank">在线预览</a>
+					</div>
+				</li>
+
 				<li>
 					<div class="title">Mdx Doc</div>
 					<div class="exp">在线的,基于mdx的个人文档</div>
@@ -113,7 +107,17 @@
 						<a href="https://flaskworld.drfengling.online" target="_blank">在线预览</a>
 					</div>
 				</li>
-
+				<li>
+					<div class="title">轻量在线云盘</div>
+					<form>
+						<label for="file">选择文件：</label>
+						<input type="file" id="file" name="file"><br><br>
+						<button type="button" onclick="uploadFile()">上传文件</button>
+					</form>
+					<br>
+					<h2>文件列表</h2>
+					<ul id="fileList"></ul>
+				</li>
 			</ul>
 		</div>
 		<div class="page friends">
@@ -129,8 +133,94 @@
 			<p>哔哩哔哩：<a href="#" target="_blank">海边的橘座（UID：......）</a></p>
 		</div>
 	</div>
+	<footer>
+		<div id="footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 col-md-offset-3 footer-list text-center">
+						<ul class="kratos-social-icons">
 
+							<li><a href="mailto:Drfengling@163.com"><i class="fa fa-envelope"></i></a></li>
+							<li><a target="_blank" rel="nofollow" href="https://t.me/CandyUnion"><i class="fa fa-telegram"></i></a></li>
+
+
+
+							<li><a target="_blank" rel="me" href="https://nya.one/@Drfengling"><i class="fa fa fa-share-alt-square"></i></a></li>
+							<li><a target="_blank" rel="nofollow" href="https://github.com/Drfengling"><i class="fa fa-github"></i></a></li>
+
+						</ul>
+						<ul class="kratos-copyright">
+
+							<li>&copy; 2023 浅梦博客 版权所有.</li>
+							<li>本站已运行<span id="span_dt">Loading...</span></li>
+
+						</ul>
+					</div>
+					<div>
+
+						<li>Theme <a href="https://github.com/Candinya/Kratos-Rebirth" target="_blank">Kratos:Rebirth</a></li>
+						<li>Site built with&nbsp;<i class="fa fa-heart throb" style="color:#d43f57"></i>&nbsp;by 浅梦风凌.</li>
+					</div>
+					<div>
+						<li>Powered by <a href="https://hexo.io" target="_blank" rel="nofollow">Hexo</a></li>
+						<li>Hosted on <a href="https://github.io" target="_blank">Github Pages</a></li>
+					</div>
+					<div>
+						<li><a href="https://beian.miit.gov.cn" rel="external nofollow" target="_blank">豫ICP备2022011311号</a></li>
+
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<div class="kr-tool text-center">
+			<div class="tool">
+
+				<div class="box search-box">
+					<a href="/search/">
+						<span class="fa fa-search"></span>
+					</a>
+				</div>
+
+
+				<div class="box theme-box" id="darkmode-switch">
+					<span class="fa fa-adjust"></span>
+				</div>
+
+
+			</div>
+			<div class="box gotop-box">
+				<span class="fa fa-chevron-up"></span>
+			</div>
+		</div>
+
+	</footer>
 	<script src="./index.js"></script>
 	<script src="./feng.js"></script>
+	<script src="/live2d-widget/autoload.js"></script>
+	<script defer src="/js/kratosr.min.js"></script>
+
+
+	<script>
+		if (!window.kr) {
+			window.kr = {};
+		}
+		window.kr.notMobile = (!(navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)));
+		window.kr.siteRoot = "/";
+	</script>
+	<div style="display:inline-block">
+		<script src="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/meting@1.2/dist/Meting.min.js"></script>
+		<link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.css">
+	</div>
+	<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+	<div>
+		<canvas id="snow"></canvas>
+		<script async type="text/javascript" src="/js/snow.min.js"></script>
+	</div>
+
 </body>
 </html>

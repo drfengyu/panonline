@@ -26,13 +26,13 @@ body {
 .leftnav {
     width: 300px;
     height: calc(100% - 60px);
-    background-color: #fff;
+    /*background-color: #fff;*/
     position: absolute;
     top: 30px;
     left: 30px;
     border-radius: 20px;
     overflow: auto;
-    
+    opacity: .7;
 }
 
     .leftnav img {
@@ -110,12 +110,12 @@ body {
 .rightcontent {
     width: calc(100% - 390px);
     height: calc(100% - 60px);
-    background-color: #fff;
+    /*background-color: #fff;*/
     position: absolute;
     top: 30px;
     left: 360px;
     border-radius: 20px;
-    
+    opacity:.7;
 }
 
     .rightcontent .page {
