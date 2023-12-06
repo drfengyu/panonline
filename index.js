@@ -81,7 +81,7 @@ function chuli() {
     var hash = location.hash;
     console.log(hash);
     if (hash) {
-        document.querySelector(".kratos-post-content").classList.add('show');
+        document.querySelector(".leftnav").classList.add('show');
         document.querySelector(".leftnav").classList.add('hide');
         document.querySelectorAll('.page').forEach(function (p) { p.style.display = "" });
         try {
@@ -90,7 +90,7 @@ function chuli() {
 
         }
     } else {
-        document.querySelector(".kratos-post-content").classList.remove('show');
+        document.querySelector(".leftnav").classList.remove('show');
         document.querySelector(".leftnav").classList.remove('hide');
         if (window.innerWidth >= 700) {
             setTimeout(function () {
