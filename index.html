@@ -7,200 +7,12 @@
 	<link rel="stylesheet" href="./index.css">
 	<link rel="stylesheet" id="kratos-css" href="/css/kratosr.min.css" type="text/css" media="all">
 	<link rel="stylesheet" id="darkmode-css" href="/css/kr-color-dark.min.css" type="text/css" media="(prefers-color-scheme: dark)">
-	<script src="/js/kr-dark.min.js"></script>
-</head>
 
-<body>
-	<div class="bgcover"></div>
-	<div class="leftnav">
-		<img src="./favicon.ico" alt="">
-		<p class="name">海边的橘座</p>
-		<p class="says">海内存知己，天涯若比邻。</p>
-		<ul>
-			<li data-class="about">自我介绍</li>
-			<li data-class="project">我的项目</li>
-			<li onclick="window.open('https://vercel.drfengling.online/')">在线博客</li>
-
-			<li onclick="window.open('https://drfengling.blog.csdn.net/')">我的CSDN</li>
-			<li data-class="friends">我的小伙伴们</li>
-			<li data-class="callme">联系我</li>
-			<li onclick="window.open('#')"><b>到B站关注我!</b></li>
-		</ul>
-	</div>
-	<div class="rightcontent">
-		<div class="page about">
-			<h1>自我介绍</h1>
-			<p>👋 大家好</p>
-			<p>我是海边的橘座</p>
-			<p>一个热爱热爱学习的Player</p>
-			<h2>我的技能</h2>
-			<p>熟练C#开发，会一点Java开发，也会一点Python,web,G语言和微信小程序开发,etc.</p>
-			<p>UI设计懂一些，但项目通常懒得打磨UI</p>
-			<p>不太会做视频，但喜欢做视频（<b>明示到<a href="#" target="_blank">B站</a>看我的视频！</b>）</p>
-			<h2>开发理念</h2>
-			<p>项目以实用为主，坚持做能够为自己和别人带来 方便或开心 的项目</p>
-			<p>尽量不要使用别人的UI框架</p>
-			<p>己所不欲勿施于人，所有项目非特殊情况下全部开源、免费、无广</p>
-			<p><i>目前的主要项目是C#上位机开发~</i></p>
-			<h2>我的其它</h2>
-			<p>最喜欢的颜色是：<span style="color: #09f;">#09f</span></p>
-			<p>最喜欢的一句话是：世界充满了学习,唯有学习,才能明白万物的重要性.</p>
-			<p><br></p>
-			<p>我平常喜欢刷B站，最喜欢的UP主是 海边的橘座(我自己)</p>
-			<p>因为觉得它的视频很有趣</p>
-			<p><br></p>
-			<p>我比较喜欢听音乐，普通音乐和纯音乐都喜欢听</p>
-			<p>最喜欢的歌手是徐良、乔洋、小贱</p>
-
-			<p><br></p>
-		</div>
-		<div class="page project">
-			<h1>我的项目</h1>
-			<ul class="projectlist">
-				<li>
-					<div class="title">浅梦博客</div>
-					<div class="exp">在线的,基于hexo的个人博客</div>
-					<div class="link">
-						<a href="https://vercel.drfengling.online" target="_blank">在线预览</a>
-					</div>
-				</li>
-				<li>
-					<div class="title">Chat AI</div>
-					<div class="exp">在线的,基于Nutx+openai的聊天机器人</div>
-					<div class="link">
-						<a href="https://nutxai.drfengling.online" target="_blank">在线预览</a>
-					</div>
-				</li>
-				<li>
-					<div class="title">在线图床</div>
-					<div class="exp">用来存储图片的在线网站</div>
-					<div class="link">
-						<a href="https://img.drfengling.online" target="_blank">在线预览</a>
-					</div>
-				</li>
-
-				<li>
-					<div class="title">Mdx Doc</div>
-					<div class="exp">在线的,基于mdx的个人文档</div>
-					<div class="link">
-						<a href="https://mdx.drfengling.online" target="_blank">在线预览</a>
-					</div>
-				</li>
-				<li>
-					<div class="title">Nextra Doc</div>
-					<div class="exp">在线的,基于Nextra的个人文档</div>
-					<div class="link">
-						<a href="https://live.drfengling.online" target="_blank">在线预览</a>
-					</div>
-				</li>
-				<li>
-					<div class="title">Doc2 Doc</div>
-					<div class="exp">在线的,基于Doc2的个人文档</div>
-					<div class="link">
-						<a href="https://doc.drfengling.online" target="_blank">在线预览</a>
-					</div>
-				</li>
-				<li>
-					<div class="title">FlaskAPI Web</div>
-					<div class="exp">在线的,基于FlaskAPI的个人网站</div>
-					<div class="link">
-						<a href="https://flaskworld.drfengling.online" target="_blank">在线预览</a>
-					</div>
-				</li>
-				<li>
-					<div class="title">轻量在线云盘</div>
-					<form>
-						<label for="file">选择文件：</label>
-						<input type="file" id="file" name="file"><br><br>
-						<button type="button" onclick="uploadFile()">上传文件</button>
-					</form>
-					<br>
-					<h2>文件列表</h2>
-					<ul id="fileList"></ul>
-				</li>
-			</ul>
-		</div>
-		<div class="page friends">
-			<h1>我的小伙伴们</h1>
-			<ul class="friendlist"></ul>
-		</div>
-		<div class="page callme">
-			<h1>联系我</h1>
-			<p>QQ：1940039784</p>
-			<p>Email：drfengling@163.com</p>
-			<p>Email2：1940039784@qq.com</p>
-			<p>Github：<a href="https://github.com/drfengyu/" target="_blank">drfengyu</a></p>
-			<p>哔哩哔哩：<a href="#" target="_blank">海边的橘座（UID：......）</a></p>
-		</div>
-	</div>
-	<footer>
-		<div id="footer">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-6 col-md-offset-3 footer-list text-center">
-						<ul class="kratos-social-icons">
-
-							<li><a href="mailto:Drfengling@163.com"><i class="fa fa-envelope"></i></a></li>
-							<li><a target="_blank" rel="nofollow" href="https://t.me/CandyUnion"><i class="fa fa-telegram"></i></a></li>
-
-
-
-							<li><a target="_blank" rel="me" href="https://nya.one/@Drfengling"><i class="fa fa fa-share-alt-square"></i></a></li>
-							<li><a target="_blank" rel="nofollow" href="https://github.com/Drfengling"><i class="fa fa-github"></i></a></li>
-
-						</ul>
-						<ul class="kratos-copyright">
-
-							<li>&copy; 2023 浅梦博客 版权所有.</li>
-							<li>本站已运行<span id="span_dt">Loading...</span></li>
-
-						</ul>
-					</div>
-					<div>
-
-						<li>Theme <a href="https://github.com/Candinya/Kratos-Rebirth" target="_blank">Kratos:Rebirth</a></li>
-						<li>Site built with&nbsp;<i class="fa fa-heart throb" style="color:#d43f57"></i>&nbsp;by 浅梦风凌.</li>
-					</div>
-					<div>
-						<li>Powered by <a href="https://hexo.io" target="_blank" rel="nofollow">Hexo</a></li>
-						<li>Hosted on <a href="https://github.io" target="_blank">Github Pages</a></li>
-					</div>
-					<div>
-						<li><a href="https://beian.miit.gov.cn" rel="external nofollow" target="_blank">豫ICP备2022011311号</a></li>
-
-					</div>
-
-				</div>
-			</div>
-		</div>
-		<div class="kr-tool text-center">
-			<div class="tool">
-
-				<div class="box search-box">
-					<a href="/search/">
-						<span class="fa fa-search"></span>
-					</a>
-				</div>
-
-
-				<div class="box theme-box" id="darkmode-switch">
-					<span class="fa fa-adjust"></span>
-				</div>
-
-
-			</div>
-			<div class="box gotop-box">
-				<span class="fa fa-chevron-up"></span>
-			</div>
-		</div>
-
-	</footer>
 	<script src="./index.js"></script>
 	<script src="./feng.js"></script>
 	<script src="/live2d-widget/autoload.js"></script>
 	<script defer src="/js/kratosr.min.js"></script>
-
-
+	<script src="/js/kr-dark.min.js"></script>
 	<script>
 		if (!window.kr) {
 			window.kr = {};
@@ -208,19 +20,269 @@
 		window.kr.notMobile = (!(navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)));
 		window.kr.siteRoot = "/";
 	</script>
-	<div style="display:inline-block">
-		<script src="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.js"></script>
-		<script src="https://cdn.jsdelivr.net/npm/meting@1.2/dist/Meting.min.js"></script>
-		<link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.css">
-	</div>
 	<script src="/fancybox/jquery.fancybox.min.js"></script>
+	<style>
+
+		.kratos-cover.kratos-cover-2 {
+			background-image: url('/images/banner.webp');
+		}
+
+
+		@media(min-width:768px) {
+            body.custom-background {
+                background-image: url('/1.jpg');
+                
+            }
+		}
+	</style>
+</head>
+
+<!--<body>-->
+	<!--<div class="bgcover"></div>-->
+<body class="custom-background">
+	<div id="kratos-wrapper">
+		<div id="kratos-page">
+			<div id="kratos-header">
+				<header id="kratos-mobile-topnav" class="kratos-topnav">
+					<div class="container">
+						<div class="color-logo"><a href="/">浅梦博客</a></div>
+						<div class="nav-toggle">
+							<a class="kratos-nav-toggle js-kratos-nav-toggle">
+								<i></i>
+							</a>
+						</div>
+					</div>
+				</header>
+			</div>
+			<div class="kratos-start kratos-hero-2">
+				<!-- <div class="kratos-overlay"></div> -->
+				<div class="kratos-cover kratos-cover-2 text-center">
+					<div class="desc desc2 animate-box">
+						<a href="/">
+							<h2>浅梦博客</h2> <br />
+							<span></span>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div id="kratos-blog-post">
+				<div class="container">
+					<div id="main" class="row">
+						<div class="leftnav">
+							<img src="./favicon.ico" alt="">
+							<p class="name">海边的橘座</p>
+							<p class="says">海内存知己，天涯若比邻。</p>
+							<ul>
+								<li data-class="about">自我介绍</li>
+								<li data-class="project">我的项目</li>
+								<li onclick="window.open('https://vercel.drfengling.online/')">在线博客</li>
+
+								<li onclick="window.open('https://drfengling.blog.csdn.net/')">我的CSDN</li>
+								<li data-class="friends">我的小伙伴们</li>
+								<li data-class="callme">联系我</li>
+								<li onclick="window.open('#')"><b>到B站关注我!</b></li>
+							</ul>
+						</div>
+						<section class="col-md-8">
 
 
 
-	<div>
-		<canvas id="snow"></canvas>
-		<script async type="text/javascript" src="/js/snow.min.js"></script>
-	</div>
+							<!-- Breadcrumb for tag & category page -->
 
+
+
+
+
+
+							<article>
+								<div class="kratos-hentry kratos-post-inner clearfix index-post">
+									<hr />
+									<div class="kratos-post-content">
+										
+										
+											<div class="page about">
+												<h1>自我介绍</h1>
+												<p>👋 大家好</p>
+												<p>我是海边的橘座</p>
+												<p>一个热爱热爱学习的Player</p>
+												<h2>我的技能</h2>
+												<p>熟练C#开发，会一点Java开发，也会一点Python,web,G语言和微信小程序开发,etc.</p>
+												<p>UI设计懂一些，但项目通常懒得打磨UI</p>
+												<p>不太会做视频，但喜欢做视频（<b>明示到<a href="#" target="_blank">B站</a>看我的视频！</b>）</p>
+												<h2>开发理念</h2>
+												<p>项目以实用为主，坚持做能够为自己和别人带来 方便或开心 的项目</p>
+												<p>尽量不要使用别人的UI框架</p>
+												<p>己所不欲勿施于人，所有项目非特殊情况下全部开源、免费、无广</p>
+												<p><i>目前的主要项目是C#上位机开发~</i></p>
+												<h2>我的其它</h2>
+												<p>最喜欢的颜色是：<span style="color: #09f;">#09f</span></p>
+												<p>最喜欢的一句话是：世界充满了学习,唯有学习,才能明白万物的重要性.</p>
+												<p><br></p>
+												<p>我平常喜欢刷B站，最喜欢的UP主是 海边的橘座(我自己)</p>
+												<p>因为觉得它的视频很有趣</p>
+												<p><br></p>
+												<p>我比较喜欢听音乐，普通音乐和纯音乐都喜欢听</p>
+												<p>最喜欢的歌手是徐良、乔洋、小贱</p>
+
+												<p><br></p>
+											</div>
+											<div class="page project">
+												<h1>我的项目</h1>
+												<ul class="projectlist">
+													<li>
+														<div class="title">浅梦博客</div>
+														<div class="exp">在线的,基于hexo的个人博客</div>
+														<div class="link">
+															<a href="https://vercel.drfengling.online" target="_blank">在线预览</a>
+														</div>
+													</li>
+													<li>
+														<div class="title">Chat AI</div>
+														<div class="exp">在线的,基于Nutx+openai的聊天机器人</div>
+														<div class="link">
+															<a href="https://nutxai.drfengling.online" target="_blank">在线预览</a>
+														</div>
+													</li>
+													<li>
+														<div class="title">在线图床</div>
+														<div class="exp">用来存储图片的在线网站</div>
+														<div class="link">
+															<a href="https://img.drfengling.online" target="_blank">在线预览</a>
+														</div>
+													</li>
+
+													<li>
+														<div class="title">Mdx Doc</div>
+														<div class="exp">在线的,基于mdx的个人文档</div>
+														<div class="link">
+															<a href="https://mdx.drfengling.online" target="_blank">在线预览</a>
+														</div>
+													</li>
+													<li>
+														<div class="title">Nextra Doc</div>
+														<div class="exp">在线的,基于Nextra的个人文档</div>
+														<div class="link">
+															<a href="https://live.drfengling.online" target="_blank">在线预览</a>
+														</div>
+													</li>
+													<li>
+														<div class="title">Doc2 Doc</div>
+														<div class="exp">在线的,基于Doc2的个人文档</div>
+														<div class="link">
+															<a href="https://doc.drfengling.online" target="_blank">在线预览</a>
+														</div>
+													</li>
+													<li>
+														<div class="title">FlaskAPI Web</div>
+														<div class="exp">在线的,基于FlaskAPI的个人网站</div>
+														<div class="link">
+															<a href="https://flaskworld.drfengling.online" target="_blank">在线预览</a>
+														</div>
+													</li>
+													<li>
+														<div class="title">轻量在线云盘</div>
+														<form>
+															<label for="file">选择文件：</label>
+															<input type="file" id="file" name="file"><br><br>
+															<button type="button" onclick="uploadFile()">上传文件</button>
+														</form>
+														<br>
+														<h2>文件列表</h2>
+														<ul id="fileList"></ul>
+													</li>
+												</ul>
+											</div>
+											<div class="page friends">
+												<h1>我的小伙伴们</h1>
+												<ul class="friendlist"></ul>
+											</div>
+											<div class="page callme">
+												<h1>联系我</h1>
+												<p>QQ：1940039784</p>
+												<p>Email：drfengling@163.com</p>
+												<p>Email2：1940039784@qq.com</p>
+												<p>Github：<a href="https://github.com/drfengyu/" target="_blank">drfengyu</a></p>
+												<p>哔哩哔哩：<a href="#" target="_blank">海边的橘座（UID：......）</a></p>
+											</div>
+										
+									</div>
+								</div>
+								<!-- </div> -->
+							</article>
+							</section>
+								</div>
+					</div>
+				</div>
+			<footer>
+				<div id="footer">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-6 col-md-offset-3 footer-list text-center">
+								<ul class="kratos-social-icons">
+
+									<li><a href="mailto:Drfengling@163.com"><i class="fa fa-envelope"></i></a></li>
+									<li><a target="_blank" rel="nofollow" href="https://t.me/CandyUnion"><i class="fa fa-telegram"></i></a></li>
+
+
+
+									<li><a target="_blank" rel="me" href="https://nya.one/@Drfengling"><i class="fa fa fa-share-alt-square"></i></a></li>
+									<li><a target="_blank" rel="nofollow" href="https://github.com/Drfengling"><i class="fa fa-github"></i></a></li>
+
+								</ul>
+								<ul class="kratos-copyright">
+									<div>
+									<li>&copy; 2023 浅梦博客 版权所有.</li>
+									<li>本站已运行<span id="span_dt">Loading...</span></li>
+							</div>
+							<div>
+								<li>Theme <a href="https://github.com/Candinya/Kratos-Rebirth" target="_blank">Kratos:Rebirth</a></li>
+								<li>Site built with&nbsp;<i class="fa fa-heart throb" style="color:#d43f57"></i>&nbsp;by 浅梦风凌.</li>
+							</div>
+							<div>
+								<li>Powered by <a href="https://hexo.io" target="_blank" rel="nofollow">Hexo</a></li>
+								<li>Hosted on <a href="https://github.io" target="_blank">Github Pages</a></li>
+							</div>
+							<div>
+								<li><a href="https://beian.miit.gov.cn" rel="external nofollow" target="_blank">豫ICP备2022011311号</a></li>
+
+							</div>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="kr-tool text-center">
+					<div class="tool">
+
+						<div class="box search-box">
+							<a href="/search/">
+								<span class="fa fa-search"></span>
+							</a>
+						</div>
+
+
+						<div class="box theme-box" id="darkmode-switch">
+							<span class="fa fa-adjust"></span>
+						</div>
+
+
+					</div>
+					<div class="box gotop-box">
+						<span class="fa fa-chevron-up"></span>
+					</div>
+				</div>
+			</footer>
+
+			<div style="display:block">
+				<script src="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.js"></script>
+				<script src="https://cdn.jsdelivr.net/npm/meting@1.2/dist/Meting.min.js"></script>
+				<link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.css">
+			</div>
+
+			<div>
+				<canvas id="snow"></canvas>
+				<script async type="text/javascript" src="/js/snow.min.js"></script>
+			</div>
+		</div>
+		</div>
 </body>
 </html>

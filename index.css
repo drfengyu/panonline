@@ -107,10 +107,10 @@ body {
                 font-size: 14px;
             }
 
-.rightcontent {
-    width: calc(100% - 390px);
+.kratos-post-content {
+   /* width: calc(100% - 390px);
     height: calc(100% - 60px);
-    /*background-color: #fff;*/
+    background-color: #fff;*/
     position: absolute;
     top: 30px;
     left: 360px;
@@ -118,22 +118,22 @@ body {
     
 }
 
-    .rightcontent .page {
-        margin: 20px;
+    .kratos-post-content .page {
+       /* margin: 20px;
         line-height: 30px;
         font-size: 16px;
         height: calc(100% - 40px);
-        overflow: auto;
+        overflow: auto;*/
         display: none;
         animation: fadein .5s;
     }
 
 @media(max-width:700px) {
-    .rightcontent {
+   /* .kratos-post-content {
         display: none;
-    }
+    }*/
 
-        .rightcontent.show,
+        .kratos-post-content.show,
         .leftnav {
             display: block;
             width: calc(100% - 10px);
@@ -173,10 +173,10 @@ body {
         background-color: #aaa;
     }
 
-.rightcontent .page h1,
-.rightcontent .page h2,
-.rightcontent .page h3,
-.rightcontent .page h4 {
+.kratos-post-content .page h1,
+.kratos-post-content .page h2,
+.kratos-post-content .page h3,
+.kratos-post-content .page h4 {
     font-size: 28px;
     font-weight: 400;
     padding-left: 20px;
@@ -186,22 +186,22 @@ body {
     padding-top: 10px;
 }
 
-.rightcontent .page h2 {
+.kratos-post-content .page h2 {
     font-size: 24px;
 }
 
-.rightcontent .page h3 {
+.kratos-post-content .page h3 {
     font-size: 20px;
 }
 
-.rightcontent .page h4 {
+.kratos-post-content .page h4 {
     font-size: 18px;
 }
 
-    .rightcontent .page h1::before,
-    .rightcontent .page h2::before,
-    .rightcontent .page h3::before,
-    .rightcontent .page h4::before {
+    .kratos-post-content .page h1::before,
+    .kratos-post-content .page h2::before,
+    .kratos-post-content .page h3::before,
+    .kratos-post-content .page h4::before {
         content: '';
         width: 3px;
         height: 20px;
@@ -212,7 +212,7 @@ body {
         border-radius: 3px;
     }
 
-.rightcontent .page p {
+.kratos-post-content .page p {
     text-indent: 20px;
 }
 

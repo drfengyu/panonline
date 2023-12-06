@@ -1,10 +1,4 @@
-﻿function resize() {
-    document.body.style.width = window.innerWidth + 'px';
-    document.body.style.height = window.innerHeight + 'px';
-}
-resize();
-window.addEventListener('resize', resize);
-
+﻿
 var says = [
 "世界充满了学习,唯有学习,才能明白万物的重要性.",
     "海内存知己，天涯若比邻。",
@@ -87,7 +81,7 @@ function chuli() {
     var hash = location.hash;
     console.log(hash);
     if (hash) {
-        document.querySelector(".rightcontent").classList.add('show');
+        document.querySelector(".kratos-post-content").classList.add('show');
         document.querySelector(".leftnav").classList.add('hide');
         document.querySelectorAll('.page').forEach(function (p) { p.style.display = "" });
         try {
@@ -96,7 +90,7 @@ function chuli() {
 
         }
     } else {
-        document.querySelector(".rightcontent").classList.remove('show');
+        document.querySelector(".kratos-post-content").classList.remove('show');
         document.querySelector(".leftnav").classList.remove('hide');
         if (window.innerWidth >= 700) {
             setTimeout(function () {
